@@ -1,5 +1,9 @@
+
 .container {
+    margin: 0 auto;
     box-sizing: border-box;
+    position: relative;
+    z-index: 3;
 
     display: grid;
     gap: 25px;
@@ -15,6 +19,81 @@ a {
     color: black;
 }
 
+
+/* TEST */
+
+
+.addPage{
+    display: block;
+    position:relative;
+    height: 800px;
+    width: 500px;
+    top: -1500px;
+    right: -1380px;    
+    transition: right .4s;
+    
+    
+
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.dishPage, .ingredient, .weeklyPage {   
+    padding: 25px;
+    position: relative;    
+    height: 100%;
+    border-radius: 30px;
+    background-color: rgb(238, 234, 234);
+    box-shadow: 5px 5px 20px;
+
+
+    transition: right .4s;
+    right: -3000px;
+    opacity: 0;
+    animation: fadeOut .4s;
+    
+}
+
+.ingredient{
+    position: relative;
+    top: -800px;
+}
+
+.weeklyPage{
+    position: relative;
+    top: -1600px;
+}
+
+.showIt{
+    transition: right .2s;
+    right: 300px;
+    display: block;
+}
+
+.selectedDiv{
+    display: block;
+    transition: right .4s;
+    opacity: 1;
+    right: 0px;
+    animation: fadeIn .6s;
+    
+}
 
  /* Side bar */
 .sidebar {

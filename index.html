@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FoodIt</title>
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
 </head>
 
 <body>
@@ -28,11 +29,13 @@
                     <div class="dropdown">
                         <a href="#" class="dropdownlink">Add..</a>
                         <div class="dropdown-content">
-                            <a href="#">Add dish</a>
-                            <a href="#">Add Ingredient</a>
-                            <a href="#">Weekly plan</a>
+                            <a href="#" class="dishAdd">Add dish</a>
+                            <a href="#" class="ingredientAdd">Add Ingredient</a>
+                            <a href="#" class="weekly">Weekly plan</a>
+                            
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -176,6 +179,38 @@
                         </div>
                     </div>
                     
+                </div>
+            </div>
+        </div>
+
+
+        <div class="addLists">
+            <div class="addPage">
+                <div class="dishPage">
+                    <label for="dishName">Add Dish</label>
+                    <input type="text" name="dishName">
+                    <hr>
+
+                    <label for="ingredientList">Choose a ingredient to add:</label>
+
+                    <select name="ingredientList" id="ingredientList">
+                      <option value="eggs">Eggs</option>
+                      <option value="bacon">Bacon</option>
+                      <option value="cheese">Cheese</option>
+                      <option value="beans">Beans</option>
+                    </select>
+                    <button class="addIngredientBtn">Add</button>
+                    <hr>
+                    <textarea name="instructions" id="instructions" cols="30" rows="10" style="max-width: 400px;"></textarea>
+                </div>
+
+                <div class="ingredient">
+                    <label for="ingredientName">Add Ingredient</label>
+                    <input type="text" name="ingredientName">
+                    <button>Add</button>
+                </div>
+                <div class="weeklyPage">
+                    <div>Add dish for your weekly plan</div>
                 </div>
             </div>
         </div>
